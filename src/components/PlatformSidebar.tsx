@@ -10,6 +10,7 @@ import {
   Video,
   UserCheck,
   Building,
+  HelpCircle,
 } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
@@ -30,6 +31,7 @@ const navigationItems = [
   { title: "Candidates", url: "/candidates", icon: Users },
   { title: "Job Postings", url: "/jobs", icon: Building },
   { title: "Screenings", url: "/screenings", icon: UserCheck },
+  { title: "Question Management", url: "/question-management", icon: HelpCircle },
   { title: "Analytics", url: "/analytics", icon: BarChart3 },
   { title: "Messages", url: "/messages", icon: MessageSquare },
   { title: "Calendar", url: "/calendar", icon: Calendar },

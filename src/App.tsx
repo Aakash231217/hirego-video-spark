@@ -13,6 +13,9 @@ import Candidates from "./pages/Candidates";
 import Jobs from "./pages/Jobs";
 import Screenings from "./pages/Screenings";
 import Analytics from "./pages/Analytics";
+import QuestionManagement from "./pages/QuestionManagement";
+import CandidateDashboard from "./pages/CandidateDashboard";
+import VideoRecording from "./pages/VideoRecording";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +43,9 @@ const App = () => (
                   <Route path="/calendar" element={<div className="text-center py-20 text-muted-foreground">Calendar page coming soon</div>} />
                   <Route path="/reports" element={<div className="text-center py-20 text-muted-foreground">Reports page coming soon</div>} />
                   <Route path="/settings" element={<div className="text-center py-20 text-muted-foreground">Settings page coming soon</div>} />
+                  <Route path="/question-management" element={<QuestionManagement />} />
+                  <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
+                  <Route path="/candidate/video-recording/:jobId" element={<VideoRecording />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
