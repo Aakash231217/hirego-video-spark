@@ -1,11 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { DashboardStats } from "@/components/DashboardStats";
+import { RecentActivity } from "@/components/RecentActivity";
+import { QuickActions } from "@/components/QuickActions";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-3xl font-bold">Dashboard</h1>
+        <p className="text-muted-foreground">
+          Welcome to your platform. Here's what's happening today.
+        </p>
+      </div>
+
+      <DashboardStats />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <RecentActivity />
+        <QuickActions />
       </div>
     </div>
   );
