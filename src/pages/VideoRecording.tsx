@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -43,14 +42,20 @@ const jobQuestions = {
       "How do you ensure the ethical use of data in your work?"
     ]
   }
-};
+} as const;
+
+type JobId = keyof typeof jobQuestions;
 
 const VideoRecording = () => {
-  const { jobId } = useParams();
+  const { jobId: jobIdParam } = useParams();
   const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   
+  // Convert string parameter to number and validate
+  const jobId = jobIdParam ? parseInt(jobIdParam, 10) as JobId : null;
+  const job = jobId && jobId in jobQuestions ? jobQuestions[jobId] : null;
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -60,8 +65,6 @@ const VideoRecording = () => {
   const [micEnabled, setMicEnabled] = useState(true);
   const [recordingTime, setRecordingTime] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
-
-  const job = jobQuestions[jobId as keyof typeof jobQuestions];
 
   useEffect(() => {
     startCamera();
@@ -139,7 +142,7 @@ const VideoRecording = () => {
   };
 
   const nextQuestion = () => {
-    if (currentQuestion < job.questions.length - 1) {
+    if (job && currentQuestion < job.questions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
       setRecordingTime(0);
       setRecordedChunks([]);
