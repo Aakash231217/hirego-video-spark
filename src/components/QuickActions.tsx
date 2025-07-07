@@ -1,43 +1,43 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Plus, Upload, Download, Send, Users, FileText } from "lucide-react";
+import { Video, Users, Building, UserCheck, BarChart3, MessageSquare } from "lucide-react";
 
 const quickActions = [
   {
-    title: "Create Project",
-    description: "Start a new project",
-    icon: Plus,
+    title: "Review Video Resumes",
+    description: "AI-powered video analysis",
+    icon: Video,
     variant: "default" as const,
   },
   {
-    title: "Upload Files",
-    description: "Add new documents",
-    icon: Upload,
-    variant: "outline" as const,
-  },
-  {
-    title: "Invite Users",
-    description: "Add team members",
+    title: "Add Candidate",
+    description: "Onboard new candidates",
     icon: Users,
     variant: "outline" as const,
   },
   {
-    title: "Generate Report",
-    description: "Create analytics report",
-    icon: FileText,
+    title: "Post New Job",
+    description: "Create job posting",
+    icon: Building,
     variant: "outline" as const,
   },
   {
-    title: "Send Message",
-    description: "Notify team members",
-    icon: Send,
+    title: "Start Screening",
+    description: "Automated AI screening",
+    icon: UserCheck,
     variant: "outline" as const,
   },
   {
-    title: "Export Data",
-    description: "Download platform data",
-    icon: Download,
+    title: "View Analytics",
+    description: "Hiring insights & metrics",
+    icon: BarChart3,
+    variant: "outline" as const,
+  },
+  {
+    title: "Message Candidates",
+    description: "Communicate with prospects",
+    icon: MessageSquare,
     variant: "outline" as const,
   },
 ];

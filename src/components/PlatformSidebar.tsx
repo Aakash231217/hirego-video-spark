@@ -7,7 +7,9 @@ import {
   FileText,
   Calendar,
   MessageSquare,
-  Zap,
+  Video,
+  UserCheck,
+  Building,
 } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
@@ -24,12 +26,14 @@ import {
 
 const navigationItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
+  { title: "Video Resumes", url: "/video-resumes", icon: Video },
+  { title: "Candidates", url: "/candidates", icon: Users },
+  { title: "Job Postings", url: "/jobs", icon: Building },
+  { title: "Screenings", url: "/screenings", icon: UserCheck },
   { title: "Analytics", url: "/analytics", icon: BarChart3 },
-  { title: "Users", url: "/users", icon: Users },
   { title: "Messages", url: "/messages", icon: MessageSquare },
   { title: "Calendar", url: "/calendar", icon: Calendar },
-  { title: "Documents", url: "/documents", icon: FileText },
-  { title: "Automation", url: "/automation", icon: Zap },
+  { title: "Reports", url: "/reports", icon: FileText },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 
@@ -39,10 +43,10 @@ export function PlatformSidebar() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <Sidebar className={isCollapsed ? "w-16" : "w-64"} collapsible>
+    <Sidebar className={isCollapsed ? "w-16" : "w-64"} collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Platform</SidebarGroupLabel>
+          <SidebarGroupLabel>HireGo AI</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map((item) => {

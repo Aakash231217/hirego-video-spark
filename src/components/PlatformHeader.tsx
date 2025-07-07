@@ -16,7 +16,8 @@ export function PlatformHeader() {
       <div className="flex items-center gap-4">
         <SidebarTrigger />
         <div className="flex items-center gap-2">
-          <h1 className="text-xl font-bold">Platform</h1>
+          <h1 className="text-xl font-bold text-blue-600">HireGo AI</h1>
+          <span className="text-sm text-muted-foreground">Admin Portal</span>
         </div>
       </div>
 
@@ -24,7 +25,7 @@ export function PlatformHeader() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Search..."
+            placeholder="Search candidates, jobs..."
             className="pl-10"
           />
         </div>

@@ -1,34 +1,34 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, TrendingUp, DollarSign, Activity } from "lucide-react";
+import { Users, Video, UserCheck, Building } from "lucide-react";
 
 const stats = [
   {
-    title: "Total Users",
-    value: "12,345",
+    title: "Active Candidates",
+    value: "2,847",
     change: "+12.5%",
     icon: Users,
     color: "text-blue-600",
   },
   {
-    title: "Revenue",
-    value: "$45,678",
-    change: "+8.2%",
-    icon: DollarSign,
+    title: "Video Resumes",
+    value: "1,923",
+    change: "+18.2%",
+    icon: Video,
     color: "text-green-600",
   },
   {
-    title: "Growth Rate",
-    value: "23.4%",
-    change: "+4.1%",
-    icon: TrendingUp,
+    title: "Successful Matches",
+    value: "456",
+    change: "+23.4%",
+    icon: UserCheck,
     color: "text-purple-600",
   },
   {
-    title: "Active Sessions",
-    value: "1,234",
-    change: "+15.3%",
-    icon: Activity,
+    title: "Active Job Posts",
+    value: "89",
+    change: "+8.3%",
+    icon: Building,
     color: "text-orange-600",
   },
 ];

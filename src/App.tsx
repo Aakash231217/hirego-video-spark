@@ -8,8 +8,11 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { PlatformHeader } from "@/components/PlatformHeader";
 import { PlatformSidebar } from "@/components/PlatformSidebar";
 import Index from "./pages/Index";
+import VideoResumes from "./pages/VideoResumes";
+import Candidates from "./pages/Candidates";
+import Jobs from "./pages/Jobs";
+import Screenings from "./pages/Screenings";
 import Analytics from "./pages/Analytics";
-import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,12 +31,14 @@ const App = () => (
               <main className="flex-1 p-6 bg-gray-50/50">
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  <Route path="/video-resumes" element={<VideoResumes />} />
+                  <Route path="/candidates" element={<Candidates />} />
+                  <Route path="/jobs" element={<Jobs />} />
+                  <Route path="/screenings" element={<Screenings />} />
                   <Route path="/analytics" element={<Analytics />} />
-                  <Route path="/users" element={<Users />} />
                   <Route path="/messages" element={<div className="text-center py-20 text-muted-foreground">Messages page coming soon</div>} />
                   <Route path="/calendar" element={<div className="text-center py-20 text-muted-foreground">Calendar page coming soon</div>} />
-                  <Route path="/documents" element={<div className="text-center py-20 text-muted-foreground">Documents page coming soon</div>} />
-                  <Route path="/automation" element={<div className="text-center py-20 text-muted-foreground">Automation page coming soon</div>} />
+                  <Route path="/reports" element={<div className="text-center py-20 text-muted-foreground">Reports page coming soon</div>} />
                   <Route path="/settings" element={<div className="text-center py-20 text-muted-foreground">Settings page coming soon</div>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
